@@ -2,12 +2,13 @@ class Queue {
 	constructor(){
 	  this.arr = [];
 	}
-	enqueue(...arr){
-	   arr.forEach(x => this.arr.push(x) )
+	enqueue(x){
+		let ind = this.arr.length;
+		this.arr[ind] = x;
 	   return this.arr;
 	}
 	dequeue(){
-		return this.arr.shift(0);
+		return this.arr.splice(0, 1);
 	}
 	front(){
 		return this.arr[0];
