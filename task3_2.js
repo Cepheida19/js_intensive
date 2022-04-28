@@ -3,8 +3,13 @@ class Stack {
 	  this.arr = [];
 	}
   
-	push(...arr){
-	   arr.forEach(x => this.arr.push(x) )
+	push(x){
+		if(this.arr.length === 0){
+			this.arr[0] = x;
+		} else {
+			let ind = this.arr.length;
+			this.arr[ind] = x;
+		}
 	   return this.arr;
 	}
 
