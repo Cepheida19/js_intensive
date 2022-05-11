@@ -1,42 +1,42 @@
 class Calculator{
-	constructor(num1, num2){
+	constructor(x, y){
 		if (arguments.length !== 2){
 			throw new Error("Нужно передать два параметра");
-		} else if(typeof num1 !== "number" || isNaN(num1) || typeof num2 !== "number" || isNaN(num2)){
+		} else if(typeof x !== "number" || isNaN(x) || typeof y !== "number" || isNaN(y)){
 			throw new Error("Параметры должны быть числами!");
 		} else {
-			this.num1 = num1;
-			this.num2 = num2;
+			this.x = x;
+			this.y = y;
 		}
 	}
-	setX(num1){
-		if(typeof num1 !== "number" || isNaN(num1)){
+	setX(x){
+		if(typeof x !== "number" || isNaN(x)){
 			throw new Error("Первый параметр должен быть числом!");
 		} else {
-			this.num1 = num1;
+			this.x = x;
 		}
 	}
-	setY(num2){
-		if(typeof num2 !== "number" || isNaN(num2)){
+	setY(y){
+		if(typeof y !== "number" || isNaN(y)){
 			throw new Error("Второй параметр должен быть числом!");
 		} else {
-			this.num2 = num2;
+			this.y = y;
 		}
 	}
 	logSum(){
-		console.log(this.num1 + this.num2);
+		console.log(this.x + this.y);
 	}
 	logMul(){
-		console.log(this.num1 * this.num2);
+		console.log(this.x * this.y);
 	}
 	logSub(){
-		console.log(this.num1 - this.num2);
+		console.log(this.x - this.y);
 	}
 	logDiv(){
-		if (this.num2 === 0){
+		if (this.y === 0){
 			throw new Error ("Деление на ноль!");
 		} else {
-			console.log(this.num1 / this.num2);
+			console.log(this.x / this.y);
 		}
 	}
 }
